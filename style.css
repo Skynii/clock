@@ -1,0 +1,51 @@
+:root{
+   --changa: 'Changa','Helvetica', sans-serif;
+   --comfortaa: 'Comfortaa', cursive;
+}
+
+body{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: blueviolet;
+   background: url('img/metro.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+main{
+   width: 100%;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+section{ 
+   width:60%;
+   
+   text-align: center;
+   margin: 4rem;
+}
+
+.clock{
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.day{
+   font-size: 1.5rem;
+   margin: 1rem;
+   font-family: var(--comfortaa);
+}
+
+.hour,.minutes, .seconds, .separator{
+   font-size: 4rem;
+   font-family: var(--changa);
+}
