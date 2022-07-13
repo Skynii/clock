@@ -1,25 +1,34 @@
 //*Puxar a data e hora local******/
 const data = new Date();
 
-let day = document.querySelector(".day");
+let daySpan = document.querySelector(".day");
 let dayNumber = document.querySelector(".dayNumber");
-let month = document.querySelector(".month");
+let monthSpan = document.querySelector(".month");
 let year = document.querySelector(".year");
 
 let hour= document.querySelector(".hour");
 let minutes= document.querySelector(".minutes");
 let seconds= document.querySelector(".seconds");
 
-day.innerHTML = data.getDay();
+/**Converter numeros para String */
+const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+const days =["Domingo", "Segunda-feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira","Sexta-Feira", "Sábado"]
+
+let month = months[data.getMonth()];
+
+let day = days[data.getDay()];
+
+daySpan.innerHTML = day;
 dayNumber.innerHTML = data.getDate();
-month.innerHTML = (data.getMonth().toString());
+monthSpan.innerHTML = month;
 year.innerHTML = data.getFullYear();
 
 hour.innerHTML = data.getHours();
 minutes.innerHTML = data.getMinutes();
 seconds.innerHTML = data.getSeconds();
 
-/**Converter numeros para String */
+
 
 
 
