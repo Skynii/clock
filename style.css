@@ -23,14 +23,11 @@ main{
 
 section{ 
    width:60%;
-   
    text-align: center;
    margin: 4rem;
 }
 
-.date{
-   margin: 1rem;
-}
+
 .clock{
    /* From https://css.glass */
 background: rgba(255, 255, 255, 0.1);
@@ -44,9 +41,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 
 .date{
+   margin:1rem;
    font-size: 1.5rem;
    font-family: var(--comfortaa);
-  
 }
 
 .time{
