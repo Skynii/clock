@@ -1,4 +1,5 @@
 //*Puxar a data e hora local******/
+setInterval(formatHours, 1000);
 const data = new Date();
 
 //**Converter numeros para String */
@@ -16,28 +17,15 @@ let year = data.getFullYear();
 document.querySelector(".date").innerHTML = `${day}, ${dayNumber} de ${month} de ${year} `
 }
 
+
+//*Data continuar a rodar automaticamente, com metodo proprio*****/
 function formatHours(){
-
-let hour = data.getHours();
-let minutes = data.getMinutes();
-let seconds = data.getSeconds(); 
-
-
-if(hour<10)  hour = "0"+hour;
-if(minutes<10) minutes = "0" +minutes;
-if(seconds<10) seconds = "0" +seconds;
-
-document.querySelector(".time").innerHTML = `${hour}:${minutes}:${seconds}`
-
+   const data = new Date();
+   document.querySelector(".time").innerHTML = data.toLocaleTimeString()
 }; 
 
-setInterval(formatHours, 1000);
 formatData();
 
 
-//*Data continuar a rodar automaticamente*****/
-
-
-//*Trocar o fundo assimm quem a hora mudar */
 
 
